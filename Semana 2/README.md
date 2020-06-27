@@ -1,53 +1,53 @@
-# Conhecendo melhor nossa base de consumidores: qual estado possui os clientes com melhores pontuações de crédito?
+# Pré-processamento de dados em Python
+
+Neste desafio vamos praticar a manipulação de dados utilizando
+a biblioteca [pandas](https://pandas.pydata.org/). Manipulação de dados é uma das tarefas
+mais fundamentais para um cientista de dados e o pandas - biblioteca mais popular do Python no assunto - ajuda a tornar essa tarefa mais agradável.
 
 ## Objetivo
 
-Queremos conhecer melhor nossos clientes por estado. Para isso, iniciamos uma análise na pontuação de crédito. 
-Para realizar a verificação inicial, precisamos de alguns valores.
-Os valores são a média, a mediana, a moda e o desvio padrão da pontuação de crédito.
+O objetivo deste desafio é extrair algumas informações quantitativas
+que nos ajudem a compreender a natureza dos dados à disposição e ganhar alguns _insights_
+sobre o _data set_.
+
+Para isso, utilizaremos o _data set_ [Black Friday](https://codenation-challenges.s3-us-west-1.amazonaws.com/data-science-0/black_friday.csv)
+disponibilizado originalmente pela [Analytics Vidhya](https://www.analyticsvidhya.com/) e acessível
+publicamente através do [Kaggle](https://www.kaggle.com). O _data set_ traz algumas variáveis relativas à transações comerciais
+realizadas durante a Black Friday em uma determinada loja de varejo. Cada observação é relativa
+a um determinado item comprado por um usuário e um usuário pode ter comprado mais de um item.
 
 ## Tópicos
 
-Neste desafio você aprenderá:
+Neste desafios nós vamos explorar:
 
-- Média;
-- Mediana;
-- Moda;
-- Desvio padrão.
+* Python
+* Pandas
+* Jupyter notebook
 
 ## Requisitos
 
-Você precisará de python 3.6 (ou superior).
+Você precisará de Python 3 e pip. É altamente recomendado utilizar ambientes virtuais
+com o virtualenv e o arquivo `requirements.txt` para instalar os pacotes dependências
+do desafio:
 
-O recomendado é você utilizar um [ambiente virtual](https://pythonacademy.com.br/blog/python-e-virtualenv-como-programar-em-ambientes-virtuais). Para isto, execute os comandos como no exemplo abaixo:
+```bash
+$ pip3 install virtualenv
+$ virtualenv venv -p python3
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
 
-    pip3 install virtualenv
-    virtualenv venv -p python3
-    source venv/bin/activate 
+Windows
 
-Ao terminar o desafio, você pode sair do ambiente criado com o comando `deactivate`
+```bash
+> pip3 install virtualenv
+> virtualenv ..\venv -p python3
+> ..\venv\Scripts\activate
+> pip install -r requirements.txt
+```
 
-## Detalhes
+Quando finalizado, você pode desativar o ambiente virtual do virtualenv com:
 
-A resposta deve conter os valores da média, mediana, moda e desvio padrão da pontuação de crédito para cada estado do dataset.
-O arquivo para submissão deve estar em formato json, conforme o arquivo exemplo "submission.json".
-
-**OBSERVAÇÃO:**  É recomendado utilizar Python e pandas para esse desafio, mas também é possível utilizar outras ferramentas e linguagens de programação.
-
-Descrição dos dados:
-'id': Identificador do cliente
-'sobrenome': Sobrenome do cliente
-'pontuacao_credito': Pontuação de crédito do cliente (quanto maior, melhor o cliente geralmente)
-'estado_residencia': Estado de residência do cliente
-'genero': Gênero do cliente
-'nivel_estabilidade': Nível de estabilidade do cliente
-'saldo_conta': Saldo disponível na conta do cliente
-'numero_produtos': Número de produtos que o cliente consome
-'possui_cartao_de_credito': Possui um cartão de crédito cadastrado
-'membro_ativo': Membro acessa e consome frequentemente
-
-Obs: Os dados são fictícios, mas tentam representar a realidade de uma base de clientes de um produto SaaS. 
-
-
-
-
+```bash
+$ deactivate
+```
